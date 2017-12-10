@@ -20,7 +20,7 @@
       <foodType>Processed</foodType>
       <joy>0.5</joy>
       <drugCategory>Hard</drugCategory>
-      <baseIngestTicks>240</baseIngestTicks>
+      <baseIngestTicks>100</baseIngestTicks>
       <ingestSound>Ingest_Inject</ingestSound>
       <ingestHoldOffsetStanding>
         <northDefault>
@@ -39,28 +39,28 @@
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
-          <offset>0.4</offset>
-          <toleranceChemical>Psychite</toleranceChemical>
+          <offset>-0.1</offset>
+          <toleranceChemical>Numbicaine</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>PsychiteTolerance</hediffDef>
-          <severity>0.040</severity>
+          <hediffDef>NumbicaineTolerance</hediffDef>
+          <severity>0.060</severity>
 					<divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-			<researchPrerequisite>PsychiteRefining</researchPrerequisite>
+			<researchPrerequisite>NumbicaineRefining</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <PsychoidLeaves>8</PsychoidLeaves>
+      <Neutroamine>10</Neutroamine>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
-        <chemical>Psychite</chemical>
+        <chemical>Numbicaine</chemical>
         <addictiveness>0.10</addictiveness>
         <minToleranceToAddict>0.04</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
@@ -68,19 +68,19 @@
         <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
         <listOrder>100</listOrder>
         <overdoseSeverityOffset>
-          <min>0.18</min>
-          <max>0.35</max>
+          <min>0.15</min>
+          <max>0.30</max>
         </overdoseSeverityOffset>
-				<largeOverdoseChance>0.01</largeOverdoseChance>
+				<largeOverdoseChance>0.05</largeOverdoseChance>
 			</li>
     </comps>
   </ThingDef>
 
   <HediffDef>
-    <defName>YayoHigh</defName>
+    <defName>NumbicaineHigh</defName>
     <hediffClass>HediffWithComps</hediffClass>
-    <label>high on yayo</label>
-    <labelNoun>a yayo high</labelNoun>
+    <label>Numbicaine</label>
+    <labelNoun>under the influence of numbicaine</labelNoun>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
@@ -105,26 +105,25 @@
   </HediffDef>
 
   <ThoughtDef>
-    <defName>YayoHigh</defName>
+    <defName>NumbicaineHigh</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>YayoHigh</hediff>
+    <hediff>NumbicaineHigh</hediff>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>high on yayo</label>
-        <description>Feeling pumped! Let's do this!</description>
-        <baseMoodEffect>35</baseMoodEffect>
+        <label>under the influence of numbicaine</label>
+        <description>I can't feel my face! This is so bizzare.</description>
       </li>
     </stages>
   </ThoughtDef>
   
-  <!-- Psychite addiction -->
+  <!-- Numbicaine addiction -->
   
   <ChemicalDef>
-    <defName>Psychite</defName>
-    <label>psychite</label>
-    <addictionHediff>PsychiteAddiction</addictionHediff>
-    <toleranceHediff>PsychiteTolerance</toleranceHediff>
+    <defName>Numbicaine</defName>
+    <label>numbicaine</label>
+    <addictionHediff>NumbicaineAddiction</addictionHediff>
+    <toleranceHediff>NumbicaineTolerance</toleranceHediff>
     <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
     <onGeneratedAddictedEvents>
       <li>
@@ -139,16 +138,16 @@
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">
-    <defName>Chemical_Psychite</defName>
+    <defName>Chemical_Numbicaine</defName>
     <needClass>Need_Chemical</needClass>
-    <label>psychite</label>
-    <description>Because of a psychite addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <label>numbicaine</label>
+    <description>Because of a numbicaine addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
     <listPriority>50</listPriority>
   </NeedDef>
 
   <HediffDef ParentName="DrugToleranceBase">
-    <defName>PsychiteTolerance</defName>
-    <label>psychite tolerance</label>
+    <defName>NumbicaineTolerance</defName>
+    <label>numbicaine tolerance</label>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.015</severityPerDay>
@@ -160,8 +159,8 @@
 		<hediffGivers>
 			<li Class="HediffGiver_RandomDrugEffect">
 				<hediff>ChemicalDamageSevere</hediff>
-				<minSeverity>0.50</minSeverity>
-				<baseMtbDays>120</baseMtbDays>
+				<minSeverity>0.20</minSeverity>
+				<baseMtbDays>70</baseMtbDays>
 				<partsToAffect>
 					<li>LeftKidney</li>
 					<li>RightKidney</li>
@@ -171,10 +170,10 @@
   </HediffDef>
   
   <HediffDef ParentName="AddictionBase">
-    <defName>PsychiteAddiction</defName>
+    <defName>NumbicaineAddiction</defName>
     <hediffClass>Hediff_Addiction</hediffClass>
-    <label>psychite addiction</label>
-    <causesNeed>Chemical_Psychite</causesNeed>
+    <label>numbicaine addiction</label>
+    <causesNeed>Chemical_Numbicaine</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.0333</severityPerDay>
