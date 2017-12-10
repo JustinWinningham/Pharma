@@ -17,7 +17,7 @@
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
 		<researchViewX>0</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewY>2</researchViewY>
 		<tab>Pharma</tab>
 	</ResearchProjectDef>
 
@@ -34,12 +34,28 @@
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
-		<researchViewX>0</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
 		<tab>Pharma</tab>
 	</ResearchProjectDef>
 	
-	
+	<ResearchProjectDef>
+		<defName>Morphine</defName>
+		<label>morphine</label>
+		<description>Learn how to produce Morphine, a stong but addictive painkiller</description>
+		<baseCost>5500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>AdvancedPharmaceuticalFabrication</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>1.5</researchViewX>
+		<researchViewY>0</researchViewY>
+		<tab>Pharma</tab>
+	</ResearchProjectDef>
 	
 	
 	<!--
