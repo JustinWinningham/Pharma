@@ -6,7 +6,7 @@
     <label>nerve-cleanse</label>
     <description>A synthetic drug that supresses physical pain for a short amount of time.\n\nBased on the old world drug Acetaminophen. Non habit forming.</description>
     <graphicData>
-      <texPath>Things/Item/Drug/NerveCleanse</texPath>
+      <texPath>Things/Item/Drug/Nervecleanse.png</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <socialPropernessMatters>false</socialPropernessMatters>
