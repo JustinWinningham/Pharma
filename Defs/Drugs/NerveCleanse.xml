@@ -3,7 +3,7 @@
 
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>NerveCleanse</defName>
-    <label>nerve-cleanse</label>
+    <label>nervecleanse</label>
     <description>A synthetic drug that supresses physical pain for a short amount of time.\n\nBased on the old world drug Acetaminophen. Non habit forming.</description>
     <graphicData>
       <texPath>Things/Item/Drug/NerveCleanse</texPath>
@@ -27,7 +27,7 @@
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-			<researchPrerequisite>NerveCleanseProduction</researchPrerequisite>
+			<researchPrerequisite>NerveCleanse</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -41,8 +41,8 @@
       <li Class="CompProperties_Drug">
         <listOrder>1100</listOrder>
         <overdoseSeverityOffset>
-          <min>0.08</min>
-          <max>0.14</max>
+          <min>0.05</min>
+          <max>0.1</max>
         </overdoseSeverityOffset>
       </li>
     </comps>
@@ -63,7 +63,8 @@
     </comps>
       <stages>
         <li>
-          <painFactor>0.75</painFactor>
+          <painFactor>0.85</painFactor>
+		  <painOffset>-0.1</painOffset>
         </li>
       </stages>
   </HediffDef>
