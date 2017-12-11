@@ -39,5 +39,54 @@
 		</visualSizeRange>
 	</plant>
   </ThingDef>
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>SpiderWeed</defName>
+    <label>spiderweed bramble</label>
+    <description>An incredibly fast growing vine covered in sharp thorns. Difficult to walk through with any kind of speed</description>
+    <statBases>
+      <MaxHitPoints>35</MaxHitPoints>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SpiderWeedPlant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>150</pathCost>
+    <ingestible>
+      <nutrition>0.1</nutrition>
+    </ingestible>
+    <plant>
+		<fertilityMin>0.1</fertilityMin>
+		<fertilitySensitivity>0.7</fertilitySensitivity>
+		<growDays>0.1</growDays>
+		<dieIfLeafless>false</dieIfLeafless>
+		<harvestWork>55</harvestWork>
+		<maxMeshCount>4</maxMeshCount>
+		<wildClusterRadius>50</wildClusterRadius>
+		<visualSizeRange>
+			<min>0.7</min>
+			<max>0.85</max>
+		</visualSizeRange>
+		<topWindExposure>0.4</topWindExposure>
+		<wildClusterSizeRange>
+			<min>35</min>
+			<max>50</max>
+		</wildClusterSizeRange>
+		<harvestTag>Standard</harvestTag>
+		<!--<harvestedThingDef>RawPowderLeaf</harvestedThingDef>-->
+		<!--<harvestYield>1</harvestYield>-->
+		<sowMinSkill>0</sowMinSkill>
+		<sowTags>
+			<li>Ground</li>
+			<li>Hydroponic</li>
+		</sowTags>
+		<topWindExposure>0.2</topWindExposure>
+		<visualSizeRange>
+			<min>0.25</min>
+			<max>0.75</max>
+		</visualSizeRange>
+	</plant>
+  </ThingDef>
 
 </Defs>
