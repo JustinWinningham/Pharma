@@ -6,7 +6,7 @@
     <label>numbicaine</label>
     <description>A Powerful but highly addictive painkiller</description>
     <graphicData>
-      <texPath>Things/Item/Drug/NerveCleanse</texPath>
+      <texPath>Things/Item/Drug/Numbicaine</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <rotatable>false</rotatable>
@@ -57,6 +57,7 @@
     </recipeMaker>
     <costList>
       <Neutroamine>10</Neutroamine>
+	  <RawPowderLeaf>5</RawPowderLeaf>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">

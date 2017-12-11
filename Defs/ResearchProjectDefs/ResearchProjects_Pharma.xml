@@ -7,7 +7,7 @@
 		<defName>AdvancedPharmaceuticalFabrication</defName>
 		<label>advanced pharmaceutical fabrication</label>
 		<description>Allows you to fabricate a far wider range of drugs and medicine.</description>
-		<baseCost>5000</baseCost>
+		<baseCost>3000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>MedicineProduction</li>
@@ -25,7 +25,7 @@
 		<defName>NerveCleanse</defName>
 		<label>nerve cleanse</label>
 		<description>Allows you to create NerveCleanse, a medium strength, non addictive painkiller</description>
-		<baseCost>4000</baseCost>
+		<baseCost>1600</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>AdvancedPharmaceuticalFabrication</li>
@@ -40,19 +40,19 @@
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
-		<defName>Morphine</defName>
-		<label>morphine</label>
-		<description>Learn how to produce Morphine, a stong but addictive painkiller</description>
-		<baseCost>5500</baseCost>
+		<defName>NumbicaineRefining</defName>
+		<label>numbicaine</label>
+		<description>Learn how to produce Numbicaine, a stong but addictive painkiller</description>
+		<baseCost>2200</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
-			<li>AdvancedPharmaceuticalFabrication</li>
+			<li>NerveCleanse</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
-		<researchViewX>1.5</researchViewX>
+		<researchViewX>2</researchViewX>
 		<researchViewY>0</researchViewY>
 		<tab>Pharma</tab>
 	</ResearchProjectDef>
