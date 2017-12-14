@@ -9,24 +9,14 @@ using RimWorld;
 
 namespace Pharma
 {
-    public class Building_PharmaVat : Building
+    public class SpreadingPlant
     {
-        private enum Phase
+        int _PatchSize = 1;
+        Plant P;
+
+        SpreadingPlant()
         {
-            offline,
-            active
         }
 
-        private CompGlower glowerComp;
-        private CompPowerTrader powerComp;
-
-        private bool destroyedFlag = false;
-
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-
-            SetPowerGlower();
-        }
     }
 }
