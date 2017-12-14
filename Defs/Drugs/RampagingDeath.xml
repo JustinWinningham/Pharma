@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugPillBase">
+    <defName>RampagingDeath</defName>
+    <label>Rampaging Death</label>
+    <description>A powerful narcotic that grants the patient superhuman abilities for a short time, before falling over dead.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/RampagingDeath</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MarketValue>300</MarketValue>
+      <Mass>0.01</Mass>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>RampagingDeathHigh</hediffDef>
+          <severity>1.00</severity>
+          <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+			<researchPrerequisite>RampagingDeath</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Numbicaine>5</Numbicaine>
+	  <Luciferium>5</Luciferium>
+	  <Neutroamine>5</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>RampagingDeath</chemical>
+        <addictiveness>1.00</addictiveness>
+        <needLevelOffset>0.01</needLevelOffset>
+        <listOrder>1020</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>RampagingDeathHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass> <!-- Need to look into this -->
+    <label>Rampaging Death</label>
+    <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_HealOldWounds" />
+		</comps>
+    <stages>
+      <li>
+        <painFactor>0.1</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>1.0</offset>
+		  </li>
+		  <li>
+			<capacity>Sight</capacity>
+			<offset>0.5</offset>
+		  </li>
+		  <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>1.50</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.25</offset>
+          </li>
+		  <li>
+            <capacity>Hearing</capacity>
+            <offset>0.60</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.50</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- RampagingDeath addiction -->
+
+  <ChemicalDef>
+    <defName>RampagingDeath</defName>
+    <label>rampaging death</label>
+    <addictionHediff>RampagingDeathAddiction</addictionHediff>
+    <canBinge>false</canBinge>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_RampagingDeath</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>RampagingDeath</label>
+    <description>Dead man walking. Even taking more doses will not save this person.</description>
+    <listPriority>10</listPriority>
+    <fallPerDay>1.25</fallPerDay>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>RampagingDeathAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>rampaging death need</label>
+    <causesNeed>Chemical_RampagingDeath</causesNeed>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>unmet</label>
+        <painOffset>0.1</painOffset>
+        <lifeThreatening>true</lifeThreatening>
+        <deathMtbDays>0.01</deathMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>1.2</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+</Defs>

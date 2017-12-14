@@ -57,6 +57,24 @@
 		<tab>Pharma</tab>
 	</ResearchProjectDef>
 	
+	<ResearchProjectDef>
+		<defName>RampagingDeath</defName>
+		<label>Rampaging Death</label>
+		<description>Your chemists unlock the secrets of rampaging death, a powerful narcotic that grants the patient superhuman abilities for a short time, before falling over dead.</description>
+		<baseCost>4000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>AdvancedPharmaceuticalFabrication</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1</researchViewY>
+		<tab>Pharma</tab>
+	</ResearchProjectDef>
+	
 	
 	<!--
 	
