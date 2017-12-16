@@ -61,4 +61,25 @@
     </comps>
   </ThingDef>
   
+  <ThingDef ParentName="PharmaPlantEdible">
+      <defName>RawHallucinut</defName>
+      <label>hallucinut</label>
+      <description>hallucinut plant</description>
+      <graphicData>
+          <texPath>Things/Item/Resource/PlantFoodRaw/Hallucinut</texPath>
+      </graphicData>
+      <statBases>
+          <MarketValue>2</MarketValue>
+      </statBases>
+      <ingestible>
+          <foodType>VegetableOrFruit</foodType>
+      </ingestible>
+      <comps>
+          <li Class="CompProperties_Rottable">
+              <daysToRotStart>20</daysToRotStart>
+              <rotDestroys>true</rotDestroys>
+          </li>
+      </comps>
+  </ThingDef>
+  
 </Defs>
