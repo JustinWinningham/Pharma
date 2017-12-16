@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>SmokeLeafBrownie</defName>
+    <label>SmokeLeaf Brownie</label>
+    <description>A delicious brownie with some Smokeleaf baked into it.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Chocolate</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+		<socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+	  <WorkToMake>600</WorkToMake>
+      <MarketValue>8</MarketValue>
+      <Mass>0.15</Mass>
+      <Flammability>0.8</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <foodType>Processed</foodType>
+      <nutrition>0.40</nutrition>
+      <joy>1.0</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+	  <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SmokeleafBrownieHigh</hediffDef>
+          <severity>0.6</severity>
+          <toleranceChemical>Smokeleaf</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.05</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SmokeleafBrownieTolerance</hediffDef>
+          <severity>0.040</severity>
+		  <divideByBodySize>true</divideByBodySize>
+		</li>
+      </outcomeDoers> 
+	  
+    </ingestible>
+	<recipeMaker>
+			<recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+			<workSpeedStat>Cooking</workSpeedStat>
+			<workSkill>7</workSkill>
+    </recipeMaker>
+	<comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Smokeleaf</chemical>
+        <addictiveness>0.020</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>20</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SmokeleafBrownieHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>stoned on smokeleaf</label>
+    <labelNoun>a smokeleaf high</labelNoun>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.0</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+          <painOffset>-0.2</painOffset>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>-0.3</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.1</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SmokeleafBrownieHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SmokeleafBrownieHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>high on smokeleaf</label>
+        <description>I'm, like, stoned, man. What was in that thing?</description>
+        <baseMoodEffect>25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <HediffDef ParentName="SmokeleafTolerance">
+    <defName>SmokeleafBrownieTolerance</defName>
+    <label>smokeleaf tolerance</label>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Smokeleaf</chemical>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>
