@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>SmokeLeafBrownie</defName>
-    <label>SmokeLeaf Brownie</label>
-    <description>A delicious brownie with some Smokeleaf baked into it.</description>
+    <label>Smokeleaf brownie</label>
+    <description>A delicious brownie with some Smokeleaf baked in.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Chocolate</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -20,6 +20,7 @@
       <Flammability>0.8</Flammability>
       <DeteriorationRate>10</DeteriorationRate>
     </statBases>
+    <techLevel>Industrial</techLevel>
     <thingCategories>
       <li>Foods</li>
     </thingCategories>
@@ -27,14 +28,16 @@
       <preferability>DesperateOnly</preferability>
       <foodType>Processed</foodType>
       <nutrition>0.40</nutrition>
+      <baseIngestTicks>720</baseIngestTicks>
       <joy>1.0</joy>
       <joyKind>Gluttonous</joyKind>
+      <nurseable>true</nurseable>
       <maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
       <ingestSound>Meal_Eat</ingestSound>
 	  <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>SmokeleafBrownieHigh</hediffDef>
-          <severity>0.6</severity>
+          <severity>0.5</severity>
           <toleranceChemical>Smokeleaf</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
@@ -114,17 +117,4 @@
     </stages>
   </ThoughtDef>
   
-  <HediffDef ParentName="SmokeleafTolerance">
-    <defName>SmokeleafBrownieTolerance</defName>
-    <label>smokeleaf tolerance</label>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.015</severityPerDay>
-      </li>
-      <li Class="HediffCompProperties_DrugEffectFactor">
-        <chemical>Smokeleaf</chemical>
-      </li>
-    </comps>
-  </HediffDef>
-
 </Defs>
