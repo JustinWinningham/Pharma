@@ -4,12 +4,12 @@
   <ThingDef ParentName="PlantBase">
     <defName>Hallucinut</defName>
     <label>Hallucinut plant</label>
-    <description>A nut bearing bush that contains hallucigenic properties</description>
+    <description>A nut bearing bush that contains hallucigenic properties. Fragile.</description>
     <statBases>
       <MaxHitPoints>70</MaxHitPoints>
     </statBases>
     <graphicData>
-      <texPath>Things/Plant/Hallucinut</texPath>
+      <texPath>Things/Plant/HallucinutPlant</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <selectable>true</selectable>
@@ -23,12 +23,11 @@
 		<dieIfLeafless>true</dieIfLeafless>
 		<reproduces>false</reproduces>
 		<harvestTag>Standard</harvestTag>
-		<!-- <harvestedThingDef>RawHallucinut</harvestedThingDef> -->
+		<harvestedThingDef>RawHallucinut</harvestedThingDef>
 		<harvestYield>4</harvestYield>
-		<sowMinSkill>7</sowMinSkill>
+		<sowMinSkill>8</sowMinSkill>
 		<sowTags>
-			<li>Ground</li>
-			<li>Hydroponic</li>
+			<li>AdvancedHydroponic</li>
 		</sowTags>
 		<topWindExposure>0.4</topWindExposure>
 		<visualSizeRange>

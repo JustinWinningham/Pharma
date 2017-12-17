@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>DistillationTank</defName>
+    <label>Distillation tank</label>
+    <!-- <thingClass>Building_FermentingBarrel</thingClass> This will require code to function properly, refrence ILSpy -->
+    <graphicData>
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+    </graphicData>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>A Sterile tank used for synthesizing complex drugs</description>
+    <costList>
+      <Steel>50</Steel>
+      <Component>3</Component>
+	  <Plasteel>25</Plasteel>
+    </costList>
+	<!--
+	<comps>
+		<li Class="CompProperties_TemperatureRuinable">
+			<minSafeTemperature>38</minSafeTemperature>
+			<maxSafeTemperature>62</maxSafeTemperature>
+			<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+		</li>
+	</comps>
+	-->
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+    <!-- <constructEffect>ConstructWood</constructEffect> -->
+    <researchPrerequisites><li>Distillation</li></researchPrerequisites>
+  </ThingDef>
+
+</Defs>

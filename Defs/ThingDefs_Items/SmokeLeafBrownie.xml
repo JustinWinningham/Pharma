@@ -9,12 +9,9 @@
       <texPath>Things/Item/Resource/Chocolate</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>Standard_Drop</soundInteract>
-    <soundDrop>Standard_Drop</soundDrop>
-		<socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MaxHitPoints>60</MaxHitPoints>
-	  <WorkToMake>600</WorkToMake>
+      <MaxHitPoints>35</MaxHitPoints>
+	  <WorkToMake>700</WorkToMake>
       <MarketValue>8</MarketValue>
       <Mass>0.15</Mass>
       <Flammability>0.8</Flammability>
@@ -24,6 +21,7 @@
     <thingCategories>
       <li>Foods</li>
     </thingCategories>
+	<alwaysHaulable>true</alwaysHaulable>
     <ingestible>
       <preferability>DesperateOnly</preferability>
       <foodType>Processed</foodType>
@@ -32,7 +30,7 @@
       <joy>1.0</joy>
       <joyKind>Gluttonous</joyKind>
       <nurseable>true</nurseable>
-      <maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+      <maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
       <ingestSound>Meal_Eat</ingestSound>
 	  <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
@@ -45,20 +43,24 @@
           <offset>-0.05</offset>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>SmokeleafBrownieTolerance</hediffDef>
+          <hediffDef>SmokeleafTolerance</hediffDef>
           <severity>0.040</severity>
 		  <divideByBodySize>true</divideByBodySize>
 		</li>
       </outcomeDoers> 
-	  
     </ingestible>
 	<recipeMaker>
-			<recipeUsers>
-        <li>CraftingSpot</li>
+	  <recipeUsers>
+        <li>ElectricStove</li>
       </recipeUsers>
-			<workSpeedStat>Cooking</workSpeedStat>
-			<workSkill>7</workSkill>
+	  <workSpeedStat>CookSpeed</workSpeedStat>
+	  <workSkill>Cooking</workSkill>
+	  <targetCountAdjustment>3</targetCountAdjustment>
     </recipeMaker>
+	<costList>
+      <SmokeleafLeaves>10</SmokeleafLeaves>
+	  <Chocolate>6</Chocolate>
+    </costList>
 	<comps>
       <li Class="CompProperties_Drug">
         <chemical>Smokeleaf</chemical>

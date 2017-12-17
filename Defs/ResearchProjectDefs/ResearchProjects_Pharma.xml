@@ -58,10 +58,10 @@
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
-		<defName>RampagingDeath</defName>
-		<label>Rampaging Death</label>
-		<description>Your chemists unlock the secrets of rampaging death, a powerful narcotic that grants the patient superhuman abilities for a short time, before falling over dead.</description>
-		<baseCost>4000</baseCost>
+		<defName>Distillation</defName>
+		<label>Distillation</label>
+		<description>Allows the building of Distillation tanks.</description>
+		<baseCost>2000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>AdvancedPharmaceuticalFabrication</li>
@@ -70,153 +70,45 @@
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
-		<researchViewX>1</researchViewX>
+		<researchViewX>2</researchViewX>
 		<researchViewY>1</researchViewY>
 		<tab>Pharma</tab>
 	</ResearchProjectDef>
 	
-	
-	<!--
-	
 	<ResearchProjectDef>
-		<defName>DeepDrilling</defName>
-		<label>deep drilling</label>
-		<description>Allows you to build deep drills for extracting resources from deep underground. You'll need a ground-penetrating scanner to find the resources.</description>
-		<baseCost>1500</baseCost>
+		<defName>RampagingDeath</defName>
+		<label>Rampaging Death</label>
+		<description>Your chemists unlock the secrets of rampaging death, a powerful narcotic that grants the patient superhuman abilities for a short time, before falling over dead.</description>
+		<baseCost>4000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
-			<li>MultiAnalyzer</li>
+			<li>Distillation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
-		<researchViewX>9</researchViewX>
-		<researchViewY>0.5</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>VitalsMonitor</defName>
-		<label>vitals monitor</label>
-		<description>Allows colonists to build vitals monitors which improve medical care when placed next to hospital beds.</description>
-		<baseCost>1600</baseCost>
-		<techLevel>Industrial</techLevel>
-		<prerequisites>
-			<li>MultiAnalyzer</li>
-			<li>HospitalBed</li>
-		</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>9</researchViewX>
-		<researchViewY>1.5</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>ComponentAssembly</defName>
-		<label>component assembly</label>
-		<description>Allows you to build the Component Assembly Bench, where colonists can make components from simple materials.</description>
-		<baseCost>3000</baseCost>
-		<techLevel>Industrial</techLevel>
-		<prerequisites>
-			<li>MultiAnalyzer</li>
-		</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>10</researchViewX>
-		<researchViewY>2.9</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>MultibarrelWeapons</defName>
-		<label>multibarrel weapons</label>
-		<description>Allows you to build miniguns.</description>
-		<baseCost>2100</baseCost>
-		<techLevel>Industrial</techLevel>
-		<prerequisites>
-			<li>MultiAnalyzer</li>
-      <li>GasOperation</li>
-		</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>9</researchViewX>
-		<researchViewY>4.3</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>Cryptosleep</defName>
-		<label>cryptosleep casket</label>
-		<description>Allows colonists to construct cryptosleep caskets, which can put living beings in a state of suspended animation.</description>
-		<baseCost>1100</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-			<li>MultiAnalyzer</li>
-		</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>10</researchViewX>
-		<researchViewY>4.3</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>PoweredArmor</defName>
-		<label>powered armor</label>
-		<description>Neuro-memetic robotics and advanced plasteel weaving technologies allow you to build the power armor and power armor helmets.</description>
-		<baseCost>1600</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-			<li>MultiAnalyzer</li>
-		</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>9</researchViewX>
-		<researchViewY>3.6</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>ShieldBelt</defName>
-		<label>shield belt</label>
-		<description>Momentum-repulsion field technology allows you to build shield belts, which block ranged attacks coming in or going out.</description>
-		<baseCost>1500</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-			<li>MultiAnalyzer</li>
-		</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>10</researchViewX>
-		<researchViewY>3.6</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>ChargedShot</defName>
-		<label>charged shot</label>
-		<description>Understand the secrets of pulse-charged energy/projectile munitions. Allows you to build the charge rifle.</description>
-		<baseCost>1000</baseCost>
-		<techLevel>Spacer</techLevel>
-		<prerequisites>
-			<li>MultiAnalyzer</li>
-      <li>PrecisionRifling</li>
-		</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<requiredResearchFacilities>
-			<li>MultiAnalyzer</li>
-		</requiredResearchFacilities>
-		<researchViewX>9</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewX>2</researchViewX>
+		<researchViewY>2</researchViewY>
+		<tab>Pharma</tab>
 	</ResearchProjectDef>
 	
-	-->
+	<ResearchProjectDef>
+		<defName>AdvancedHydroponics</defName>
+		<label>Advanced Hydroponics</label>
+		<description>Some plants need 24/7 monitoring to flourish, beyond what is capable in a normal hydroponics basin. Can only be used to sow extremely fragile plants.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>AdvancedPharmaceuticalFabrication</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>1</researchViewX>
+		<researchViewY>3</researchViewY>
+		<tab>Pharma</tab>
+	</ResearchProjectDef>
 
 </Defs>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="PharmaPlantEdible">
+    <defName>RawPowderLeaf</defName>
+    <label>powderleaf</label>
+    <description>powderleaf leaves. the tips are coated in a fine powder.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/PowderLeaf</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>1</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>
