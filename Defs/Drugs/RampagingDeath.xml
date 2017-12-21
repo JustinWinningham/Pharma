@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="DrugPillBase">
+  <ThingDef ParentName="MakeableDrugPillBase">
     <defName>RampagingDeath</defName>
     <label>Rampaging Death</label>
     <description>A powerful narcotic that grants the patient superhuman abilities for a short time, before falling over dead.</description>
@@ -40,7 +40,7 @@
       <li Class="CompProperties_Drug">
         <chemical>RampagingDeath</chemical>
         <addictiveness>1.00</addictiveness>
-        <needLevelOffset>0.01</needLevelOffset>
+        <needLevelOffset>1.00</needLevelOffset>
         <listOrder>1020</listOrder>
       </li>
     </comps>
@@ -49,7 +49,7 @@
   <HediffDef>
     <defName>RampagingDeathHigh</defName>
     <hediffClass>HediffWithComps</hediffClass> <!-- Need to look into this -->
-    <label>Rampaging Death</label>
+    <label>rampaging death</label>
     <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
@@ -104,14 +104,15 @@
     <defName>RampagingDeath</defName>
     <label>rampaging death</label>
     <addictionHediff>RampagingDeathAddiction</addictionHediff>
-    <canBinge>false</canBinge>
+    <!-- <toleranceHediff>RampagingDeathTolerance</toleranceHediff> -->
+	<canBinge>false</canBinge>
   </ChemicalDef>
 
   <NeedDef ParentName="DrugAddictionNeedBase">
     <defName>Chemical_RampagingDeath</defName>
     <needClass>Need_Chemical</needClass>
     <label>RampagingDeath</label>
-    <description>Dead man walking. Even taking more doses will not save this person.</description>
+    <description>Dead man walking. Taking more doses will not save this person.</description>
     <listPriority>10</listPriority>
     <fallPerDay>1.25</fallPerDay>
   </NeedDef>
@@ -119,17 +120,17 @@
   <HediffDef ParentName="AddictionBase">
     <defName>RampagingDeathAddiction</defName>
     <hediffClass>Hediff_Addiction</hediffClass>
-    <label>rampaging death need</label>
+    <label>rampagingdeath need</label>
     <causesNeed>Chemical_RampagingDeath</causesNeed>
     <everCurableByItem>false</everCurableByItem>
     <stages>
       <li>
       </li>
       <li>
-        <label>unmet</label>
+        <label>Dead man Walking.</label>
         <painOffset>0.1</painOffset>
         <lifeThreatening>true</lifeThreatening>
-        <deathMtbDays>0.01</deathMtbDays>
+        <deathMtbDays>1</deathMtbDays>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
@@ -139,5 +140,29 @@
       </li>
     </stages>
   </HediffDef>
-  
+  <!--
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>RampagingDeathTolerance</defName>
+    <label>Dead man walking</label>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0001</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>RampagingDeath</chemical>
+      </li>
+    </comps>
+	<hediffGivers>
+		<li Class="HediffGiver_RandomDrugEffect">
+			<hediff>ChemicalDamageSevere</hediff>
+			<minSeverity>0.20</minSeverity>
+			<baseMtbDays>70</baseMtbDays>
+			<partsToAffect>
+				<li>LeftKidney</li>
+				<li>RightKidney</li>
+			</partsToAffect>
+		</li>
+	</hediffGivers>
+  </HediffDef>
+  -->
 </Defs>

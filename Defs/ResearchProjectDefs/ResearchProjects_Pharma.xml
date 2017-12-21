@@ -70,7 +70,7 @@
 		<requiredResearchFacilities>
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
-		<researchViewX>2</researchViewX>
+		<researchViewX>1</researchViewX>
 		<researchViewY>1</researchViewY>
 		<tab>Pharma</tab>
 	</ResearchProjectDef>

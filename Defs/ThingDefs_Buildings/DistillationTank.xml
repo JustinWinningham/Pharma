@@ -4,7 +4,6 @@
   <ThingDef ParentName="BuildingBase">
     <defName>DistillationTank</defName>
     <label>Distillation tank</label>
-    <!-- <thingClass>Building_FermentingBarrel</thingClass> This will require code to function properly, refrence ILSpy -->
     <graphicData>
       <texPath>Things/Building/Production/FermentingBarrel</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -18,30 +17,76 @@
     <fillPercent>0.45</fillPercent>
     <pathCost>60</pathCost>
     <statBases>
-      <WorkToBuild>800</WorkToBuild>
-      <Mass>15</Mass>
+      <WorkToBuild>1200</WorkToBuild>
+      <Mass>30</Mass>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>A Sterile tank used for synthesizing complex drugs</description>
+    <description>A Sterile tank used for distilling Numbicaine. Requires extremely high temperatures to work efficiency</description>
     <costList>
       <Steel>50</Steel>
       <Component>3</Component>
 	  <Plasteel>25</Plasteel>
     </costList>
-	<!--
 	<comps>
-		<li Class="CompProperties_TemperatureRuinable">
-			<minSafeTemperature>38</minSafeTemperature>
-			<maxSafeTemperature>62</maxSafeTemperature>
-			<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+        <li Class="Kubouch.CompProperties_UniversalFermenter">
+            <products>
+                <li>
+					<thingDef></thingDef>
+					<ingredientFilter>
+						<thingDefs>
+							<li>RawPowderLeaf</li>
+						</thingDefs>
+					</ingredientFilter>
+					<maxCapacity>90</maxCapacity>
+					<efficiency>0.1</efficiency>
+					<baseFermentationDuration>450000</baseFermentationDuration>
+					<temperatureIdeal>
+						<min>110</min>
+						<max>200</max>
+					</temperatureIdeal>
+					<temperatureSafe>
+						<min>85</min>
+						<max>350</max>
+					</temperatureSafe>
+					<progressPerDegreePerTick>0.000005</progressPerDegreePerTick>
+					<speedLessThanSafe>0.2</speedLessThanSafe>
+					<speedMoreThanSafe>0.6</speedMoreThanSafe>
+					<sunRespect>
+						<min>1</min>
+						<max>1</max>
+					</sunRespect>
+					<rainRespect>
+						<min>1</min>
+						<max>1</max>
+					</rainRespect>
+					<snowRespect>
+						<min>1</min>
+						<max>1</max>
+					</snowRespect>
+					<windRespect>
+						<min>1</min>
+						<max>1</max>
+					</windRespect>
+				</li>
+            </products>
+        </li>
+        <li Class="CompProperties_Forbiddable"/>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<basePowerConsumption>150</basePowerConsumption>
 		</li>
-	</comps>
-	-->
+		<li Class="CompProperties_Flickable"/>
+		<li Class="CompProperties_Breakdownable"/>
+		<li Class="CompProperties_Glower">
+			<glowColor>(80,112,180,0)</glowColor>
+			<glowRadius>1</glowRadius>
+		</li>
+    </comps>
     <tickerType>Rare</tickerType>
     <rotatable>false</rotatable>
     <designationCategory>Production</designationCategory>
-    <!-- <constructEffect>ConstructWood</constructEffect> -->
+    <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites><li>Distillation</li></researchPrerequisites>
   </ThingDef>
 

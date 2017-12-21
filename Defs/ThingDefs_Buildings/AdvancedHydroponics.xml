@@ -9,7 +9,7 @@
     <graphicData>
       <texPath>Things/Building/Production/HydroponicsBasin</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1,4)</drawSize>
+      <drawSize>(2,2)</drawSize>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -17,6 +17,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
+	<size>(2,2)</size>
     <altitudeLayer>FloorEmplacement</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -30,7 +31,6 @@
       <Flammability>1.0</Flammability>
       <Cleanliness>-1</Cleanliness>
     </statBases>
-    <size>(1,4)</size>
     <costList>
       <Steel>40</Steel>
       <Component>1</Component>
