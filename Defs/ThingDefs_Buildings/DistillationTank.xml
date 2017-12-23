@@ -79,8 +79,8 @@
 		<li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Breakdownable"/>
 		<li Class="CompProperties_Glower">
-			<glowColor>(80,112,180,0)</glowColor>
-			<glowRadius>1</glowRadius>
+			<glowColor>(40, 215, 210,0)</glowColor>
+			<glowRadius>2</glowRadius>
 		</li>
     </comps>
     <tickerType>Rare</tickerType>
