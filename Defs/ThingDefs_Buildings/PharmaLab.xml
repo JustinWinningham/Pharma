@@ -7,7 +7,7 @@
     <thingClass>Building_WorkTable</thingClass>
     <description>An advanced druglab with the latest and greatest equipment for drug processing.</description>
     <graphicData>
-      <texPath>Things/Building/PharmaLab</texPath>
+      <texPath>Things/Building/PharmaLab.png</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,1)</drawSize>
       <damageData>
