@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="PharmaPlantEdible">
+    <defName>RawHazeweed</defName>
+    <label>hazeweed</label>
+    <description>A cluster of hazeweed leaves. The plant has a mild calming effect when ingested.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/PowderLeaf</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>1</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>
