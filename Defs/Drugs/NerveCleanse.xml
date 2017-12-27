@@ -29,7 +29,7 @@
     <recipeMaker>
 			<researchPrerequisite>NerveCleanse</researchPrerequisite>
       <recipeUsers>
-        <li>DrugLab</li>
+        <li>PharmaLab</li>
       </recipeUsers>
     </recipeMaker>
     <costList>

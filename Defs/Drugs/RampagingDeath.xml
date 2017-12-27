@@ -28,7 +28,7 @@
 	<recipeMaker>
 			<researchPrerequisite>RampagingDeath</researchPrerequisite>
       <recipeUsers>
-        <li>DrugLab</li>
+        <li>PharmaLab</li>
       </recipeUsers>
     </recipeMaker>
     <costList>
