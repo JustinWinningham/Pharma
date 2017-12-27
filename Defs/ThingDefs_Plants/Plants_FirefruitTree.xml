@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="PlantBase" Name="PharmaTreeBase1" Abstract="True">
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+    </statBases>
+    <description>A tree.</description>
+    <altitudeLayer>Building</altitudeLayer>
+    <selectable>true</selectable>
+    <fillPercent>0.25</fillPercent>
+    <graphicData>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+				<offset>(0,0,-0.42)</offset>
+			</shadowData>
+    </graphicData>
+    <passability>PassThroughOnly</passability>
+    <pathCost>130</pathCost>
+    <blockWind>true</blockWind>
+    <ingestible>
+      <foodType>Tree</foodType>
+      <preferability>RawBad</preferability>
+      <nutrition>1.1</nutrition>
+    </ingestible>
+    <plant>
+			<fertilityMin>0.5</fertilityMin>
+			<fertilitySensitivity>0.7</fertilitySensitivity>
+			<reproduceRadius>30</reproduceRadius>
+			<soundHarvesting>Harvest_Tree</soundHarvesting>
+      <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+      <sowWork>1200</sowWork>
+      <harvestWork>800</harvestWork>
+      <harvestYield>25</harvestYield>
+      <harvestTag>Wood</harvestTag>
+      <harvestMinGrowth>0.40</harvestMinGrowth>
+      <harvestFailable>false</harvestFailable>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <visualSizeRange>
+        <min>1.2</min>
+        <max>2.0</max>
+      </visualSizeRange>
+      <topWindExposure>0.25</topWindExposure>
+      <wildClusterSizeRange>
+        <min>8</min>
+        <max>35</max>
+      </wildClusterSizeRange>
+      <wildClusterRadius>10</wildClusterRadius>
+    </plant>
+  </ThingDef>
+
+
+  <ThingDef ParentName="PharmaTreeBase1">
+    <defName>FirefruitTree</defName>
+    <label>Firefruit tree</label>
+    <description>A sweet smelling tree that grows in dry territories. bears spicy fruit, but little useable wood</description>
+    <graphicData>
+      <texPath>Things/Plant/TreeBirch</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.15, 0.3, 0.1)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>12</Beauty>
+    </statBases>
+    <ingestible>
+      <nutrition>3.5</nutrition>
+    </ingestible>
+    <plant>
+	  <growDays>30</growDays>
+      <harvestWork>700</harvestWork>
+	  <harvestedThingDef>Firefruit</harvestedThingDef>
+      <harvestYield>8</harvestYield>
+	  <sowMinSkill>6</sowMinSkill>
+      <leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>
+	  <sowTags>
+			<li>Ground</li>
+		</sowTags>
+    </plant>
+  </ThingDef>
+
+</Defs>
