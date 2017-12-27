@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 <ThingDef ParentName="BuildingBase">
     <thingClass>Building_DrugSprayer</thingClass>
     <defName>DrugSprayer</defName>
     <label>drug sprayer</label>
-    <description>A device that sprays drugs into the air to be ingested.</description>
+    <description>A device that sprays drugs into the air.</description>
     <graphicData>
-      <texPath>Things/Building/Pharma/DrugSprayer</texPath>
+      <texPath>Things/Building/DrugSprayer</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1, 1)</drawSize>
       <shadowData>

@@ -10,6 +10,8 @@ using RimWorld;
 
 namespace Pharma
 {
+
+    /*
     /// <summary>
     /// Drug sprayer building
     /// </summary>
@@ -62,4 +64,5 @@ namespace Pharma
     {
         public float range;
     }
+    */
 }

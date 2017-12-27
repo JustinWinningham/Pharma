@@ -10,6 +10,7 @@ using RimWorld;
 
 namespace Pharma
 {
+    /*
     public abstract class Building_IngestibleSprayer : Building
     {
         public abstract bool IsAcceptableAmmoToSpray(ThingDef thing);
@@ -190,4 +191,5 @@ namespace Pharma
 
 
     }
+    */
 }
