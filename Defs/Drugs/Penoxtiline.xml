@@ -35,7 +35,7 @@
     <costList>
       <Neutroamine>1</Neutroamine>
       <Penoxycyline>1</Penoxycyline>
-      <Herbalmedicine>1</Herbalmedicine>
+      <HerbalMedicine>1</HerbalMedicine>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
