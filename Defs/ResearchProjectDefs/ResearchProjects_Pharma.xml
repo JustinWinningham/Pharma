@@ -1,7 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!--========================= Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
+    <!-- BLANK RESEARCH TEMPLATE
+     Xview = horizontal, Yview = vertial (higher # = further right / further down, fractions allowed)
+     
+    <ResearchProjectDef>
+        <defName></defName>
+        <label></label>
+        <description></description>
+        <baseCost></baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li></li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>0</researchViewX>
+        <researchViewY>0</researchViewY>
+        <tab>Pharma</tab>
+     </ResearchProjectDef>
+     
+     -->
 
 	<ResearchProjectDef>
 		<defName>AdvancedPharmaceuticalFabrication</defName>
@@ -110,5 +131,23 @@
 		<researchViewY>3</researchViewY>
 		<tab>Pharma</tab>
 	</ResearchProjectDef>
+    
+    <ResearchProjectDef>
+        <defName>PenoxtilineProduction</defName>
+        <label>Penoxtiline production</label>
+        <description>Through trial and error, you are able to synthesize a new, more powerful antibiotic</description>
+        <baseCost>1500</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>AdvancedPharmaceuticalFabrication</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>1</researchViewX>
+        <researchViewY>4</researchViewY>
+        <tab>Pharma</tab>
+    </ResearchProjectDef>
 
 </Defs>
