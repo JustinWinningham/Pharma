@@ -7,7 +7,7 @@
     <thingClass>Building_WorkTable</thingClass>
     <description>An advanced druglab with the latest and greatest equipment for drug processing.</description>
     <graphicData>
-      <texPath>Things/Building/PharmaLab.png</texPath>
+      <texPath>Textures/Things/Building/PharmaLab</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,1)</drawSize>
       <damageData>
@@ -22,6 +22,7 @@
 	  <Component>10</Component>
 	  <Plasteel>15</Plasteel>
     </costList>
+	<!--Lower Cost?-->
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>

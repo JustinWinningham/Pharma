@@ -6,7 +6,7 @@
     <label>firefruit</label>
     <description>fruit from a firefruit tree (go figure). Very spicy.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/PlantFoodRaw/Firefruit</texPath>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Firefruit</texPath> <!--Placeholder Texture-->
     </graphicData>
     <statBases>
       <MarketValue>5</MarketValue>
