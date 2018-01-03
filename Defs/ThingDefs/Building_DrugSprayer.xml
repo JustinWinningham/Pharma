@@ -5,7 +5,7 @@
   <defName>DrugSprayer</defName>
     <label>drug sprayer</label>
     <description>A device that sprays drugs into the air.</description>
-  <thingClass>Building_DrugSprayer</thingClass>
+  <thingClass>Pharma.Building_DrugSprayer</thingClass>
     <graphicData>
       <texPath>Things/Building/DrugSprayer/DrugSprayer</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -19,8 +19,8 @@
       </damageData>
     </graphicData>
     <costList>
-      <Steel>50</Steel>
-      <Component>7</Component>
+      <Steel>200</Steel>
+      <Component>5</Component>
     </costList>
     <comps>
       <li Class="CompProperties_Power">
@@ -31,7 +31,7 @@
       </li>
       <li Class="CompProperties_Breakdownable"/>
       <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_DrugSprayer"/>
+      <li Class="Pharma.CompProperties_DrugSprayer"/>
     </comps>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
@@ -46,6 +46,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <pathCost>25</pathCost>
     <rotatable>false</rotatable>
+    <designationCategory>Misc</designationCategory>
     <canOverlapZones>false</canOverlapZones>
     <minifiedDef>MinifiedFurniture</minifiedDef>
     <specialDisplayRadius>5</specialDisplayRadius>
