@@ -12,7 +12,6 @@ namespace Pharma
 {
     public class Pharma_Utility
     {
-        /*
 
         /// <summary>
         /// Check if pawn has the effect of ingestible active.
@@ -34,8 +33,6 @@ namespace Pharma
             }
             return false;
         }
-        */
-
 
         /*
         public static void AdministerDrugEffect(Pawn pawn, Thing drug)

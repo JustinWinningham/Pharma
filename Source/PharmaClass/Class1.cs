@@ -9,6 +9,7 @@ using RimWorld;
 
 namespace Pharma
 {
+    /*
     public class Building_DistillationTank : Building
     {
         private int pasteCount;
@@ -219,4 +220,5 @@ namespace Pharma
         }
 
     }
+    */
 }
