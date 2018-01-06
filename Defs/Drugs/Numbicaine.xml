@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="MakeableDrugBase">
     <defName>Numbicaine</defName>
-    <label>numbicaine</label>
-    <description>A Powerful but highly addictive painkiller</description>
+    <label>Numbicaine</label>
+    <description>Very strong pain suppressing agent. Addictive.</description>
     <graphicData>
       <texPath>Things/Item/Drug/Numbicaine</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -81,7 +81,7 @@
     <defName>NumbicaineHigh</defName>
     <hediffClass>HediffWithComps</hediffClass>
     <label>Numbicaine</label>
-    <labelNoun>under the influence of numbicaine</labelNoun>
+    <labelNoun>Numbicaine High</labelNoun>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
@@ -112,7 +112,7 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>under the influence of numbicaine</label>
+        <label>Numbicaine High</label>
         <description>I can't feel my face! This is so bizzare.</description>
       </li>
     </stages>
@@ -122,7 +122,7 @@
   
   <ChemicalDef>
     <defName>Numbicaine</defName>
-    <label>numbicaine</label>
+    <label>Numbicaine</label>
     <addictionHediff>NumbicaineAddiction</addictionHediff>
     <toleranceHediff>NumbicaineTolerance</toleranceHediff>
     <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
@@ -141,14 +141,14 @@
   <NeedDef ParentName="DrugAddictionNeedBase">
     <defName>Chemical_Numbicaine</defName>
     <needClass>Need_Chemical</needClass>
-    <label>numbicaine</label>
-    <description>Because of a numbicaine addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <label>Numbicaine Addiction</label>
+    <description>Because of a Numbicaine addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
     <listPriority>50</listPriority>
   </NeedDef>
 
   <HediffDef ParentName="DrugToleranceBase">
     <defName>NumbicaineTolerance</defName>
-    <label>numbicaine tolerance</label>
+    <label>Numbicaine Tolerance</label>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.015</severityPerDay>
@@ -226,7 +226,7 @@
       </li>
       <li>
         <label>psychite withdrawal</label>
-        <description>God I'm tired. And nothing feels good any more.</description>
+        <description>God I'm tired. Nothing feels good any more.</description>
         <baseMoodEffect>-35</baseMoodEffect>
       </li>
     </stages>
