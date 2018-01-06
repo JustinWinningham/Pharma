@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>Penoxtiline</defName>
+    <label>penoxtiline</label>
+    <description>A successor to Penoxycyline. This antibiotic protects against a wider range of diseases, but requires more frequent doeses. Has no effect against pre-existing diseases</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/Penoxycyline</texPath> <!-- Placeholder texture! -->
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>700</WorkToMake>
+      <MarketValue>40</MarketValue>
+      <Mass>0.006</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PenoxtilineHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+			<researchPrerequisite>PenoxtilineProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>PharmaLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>1</Neutroamine>
+      <Penoxycyline>1</Penoxycyline>
+      <HerbalMedicine>1</HerbalMedicine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+        <overdoseSeverityOffset>
+          <min>0.08</min>
+          <max>0.14</max>
+        </overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>PenoxtilineHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>penoxtiline</label>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.33</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <makeImmuneTo>
+						<li>Malaria</li>
+						<li>SleepingSickness</li>
+						<li>Plague</li>
+                        <li>GutWorms</li>
+                        <li>MuscleParasites</li>
+                        <li>Flu</li>
+					</makeImmuneTo>
+				</li>
+      </stages>
+  </HediffDef>
+  
+</Defs>
