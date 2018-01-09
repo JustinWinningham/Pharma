@@ -7,9 +7,9 @@
     <thingClass>Building_WorkTable</thingClass>
     <description>An advanced druglab with the latest and greatest equipment for drug processing.</description>
     <graphicData>
-      <texPath>Textures/Things/Building/PharmaLab/PharmaLab</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3,1)</drawSize>
+      <texPath>Things/Building/PharmaLab/PharmaLab</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
