@@ -53,7 +53,7 @@
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>ToolCabinet</li>
-		  <li>DistillationTank</li>
+		  <!--<li>DistillationTank</li>-->
         </linkableFacilities>
       </li>
     </comps>
