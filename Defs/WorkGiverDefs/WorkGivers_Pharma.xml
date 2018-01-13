@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<WorkGiverDef>
+		<defName>DoBillsProducePharmaDrugs</defName>
+		<label>produce drugs at pharma lab</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+			<workTags>
+				<li>Intellectual</li>
+			</workTags>
+		<priorityInType>95</priorityInType>
+		<fixedBillGiverDefs>
+		  <li>PharmaLab</li>
+		</fixedBillGiverDefs>
+		<verb>produce drugs</verb>
+		<gerund>producing drugs at</gerund>
+		<requiredCapacities>
+		  <li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>

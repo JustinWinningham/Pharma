@@ -26,10 +26,10 @@
       </outcomeDoers>
     </ingestible>
 	<recipeMaker>
-			<researchPrerequisite>RampagingDeath</researchPrerequisite>
-      <recipeUsers>
-        <li>PharmaLab</li>
-      </recipeUsers>
+		<researchPrerequisite>RampagingDeath</researchPrerequisite>
+		<recipeUsers>
+			<li>PharmaLab</li>
+		</recipeUsers>
     </recipeMaker>
     <costList>
 	  <Luciferium>5</Luciferium>

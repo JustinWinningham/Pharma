@@ -27,10 +27,10 @@
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-			<researchPrerequisite>NerveCleanse</researchPrerequisite>
-      <recipeUsers>
-        <li>PharmaLab</li>
-      </recipeUsers>
+		<researchPrerequisite>NerveCleanse</researchPrerequisite>
+		<recipeUsers>
+			<li>PharmaLab</li>
+		</recipeUsers>
     </recipeMaker>
     <costList>
       <Neutroamine>2</Neutroamine>

@@ -50,10 +50,10 @@
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-			<researchPrerequisite>NumbicaineRefining</researchPrerequisite>
-    <!--  <recipeUsers>
-        <li>PharmaLab</li>
-      </recipeUsers> -->
+		<researchPrerequisite>NumbicaineRefining</researchPrerequisite>
+		<recipeUsers>
+			<li>PharmaLab</li>
+		</recipeUsers>
     </recipeMaker>
     <costList>
       <Neutroamine>10</Neutroamine>

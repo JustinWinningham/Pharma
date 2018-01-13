@@ -49,11 +49,12 @@
         <soundCast>ShotPistol</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
+		<AddHediffChance>0.3</AddHediffChance>
+		<HediffToAdd>Plague</HediffToAdd>
+		<thingClass>Pharma.Projectile_NumbicaineBullet</thingClass>
       </li>
     </verbs>
-	<AddHediffChance>0.3</AddHediffChance>
-	<HediffToAdd>Plague</HediffToAdd>
-	<thingClass>Pharma.Projectile_NumbicaineBullet</thingClass>
+	
   </ThingDef>
 
 </Defs>
