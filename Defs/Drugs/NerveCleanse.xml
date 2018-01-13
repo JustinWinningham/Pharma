@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>NerveCleanse</defName>
     <label>nervecleanse</label>
-    <description>A synthetic drug that supresses physical pain for a short amount of time.\n\nBased on the old world drug Acetaminophen. Non habit forming.</description>
+    <description>A non-habit forming drug that supresses physical pain for a short amount of time.</description>
     <graphicData>
       <texPath>Things/Item/Drug/NerveCleanse</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -33,9 +33,7 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <Neutroamine>1</Neutroamine>
-      <RawPowderLeaf>2</RawPowderLeaf>
-      <SmokeleafLeaves>2</SmokeleafLeaves>
+      <Neutroamine>2</Neutroamine>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
@@ -51,7 +49,7 @@
   <HediffDef>
     <defName>NerveCleanseHigh</defName>
     <hediffClass>HediffWithComps</hediffClass>
-    <label>nervecleanse</label>
+    <label>Nervecleanse</label>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>

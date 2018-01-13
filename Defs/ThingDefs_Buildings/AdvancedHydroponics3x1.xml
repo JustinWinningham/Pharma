@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>AdvancedHydroponicsBasinThreeXOne</defName>
-    <label>advanced hydroponics basin (3X1)</label>
-    <description>A high-tech hydroponics basin</description>
+    <label>Advanced Hydroponics Basin (3X1)</label>
+    <description>A high-tech hydroponics basin.</description>
     <thingClass>Building_PlantGrower</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/HydroponicsBasin</texPath>

@@ -6,7 +6,7 @@
     <label>Smokeleaf brownie</label>
     <description>A delicious brownie with some Smokeleaf baked in.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Chocolate</texPath>
+      <texPath>Things/Item/Resource/FoodStuffs/smokeleafBrownie.png</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>

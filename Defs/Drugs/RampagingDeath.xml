@@ -32,7 +32,6 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <Numbicaine>5</Numbicaine>
 	  <Luciferium>5</Luciferium>
 	  <Neutroamine>5</Neutroamine>
     </costList>
@@ -53,7 +52,7 @@
     <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
-    <isBad>false</isBad>
+    <isBad>true</isBad>
 		<comps>
 			<li Class="HediffCompProperties_HealOldWounds" />
 		</comps>

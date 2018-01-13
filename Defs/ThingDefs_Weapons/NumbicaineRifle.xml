@@ -4,7 +4,7 @@
 
   <ThingDef Class="Pharma.ThingDef_NumbicaineBullet" ParentName="BaseBullet">
     <defName>Bullet_NumbicaineBullet</defName>
-    <label>numbicaine bullet</label>
+    <label>Numbicaine Bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -19,10 +19,10 @@
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_NumbicaineRifle</defName>
-    <label>Numbicaine gun</label>
+    <label>Numbicaine Rifle</label>
     <description>Fires syringes full of Numbicaine. Useful for keeping colonists fighting longer than they normally would be able to.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/Pistol</texPath>
+      <texPath>Things/Item/Weps/Guns/numbicaineRifle.png</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>InteractPistol</soundInteract>
