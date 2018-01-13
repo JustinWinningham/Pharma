@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>AdvancedHydroponicsBasinFourXOne</defName>
+    <label>advanced hydroponics basin (4X1)</label>
+    <description>A high-tech hydroponics basin</description>
+    <thingClass>Building_PlantGrower</thingClass>
+    <graphicData>
+      <texPath>Things/Building/AdvancedHydroponics/AdvancedHydroponics</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	<size>(4,1)</size>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <constructEffect>ConstructMetal</constructEffect>
+    <fillPercent>0.30</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>2800</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Component>1</Component>
+	  <Plasteel>20</Plasteel>
+	  <Gold>15</Gold>
+    </costList>
+    <fertility>1.5</fertility>
+    <building>
+      <defaultPlantToGrow>Hallucinut</defaultPlantToGrow>
+      <sowTag>AdvancedHydroponic</sowTag>
+    </building>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <researchPrerequisites><li>AdvancedHydroponics</li></researchPrerequisites>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+  </ThingDef>
+
+</Defs>
