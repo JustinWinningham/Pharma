@@ -7,6 +7,7 @@
       <description>hallucinut plant</description>
       <graphicData>
           <texPath>Things/Item/Resource/PlantFoodRaw/Hallucinut</texPath>
+          <graphicClass>Graphic_StackCount</graphicClass>
       </graphicData>
       <statBases>
           <MarketValue>2</MarketValue>

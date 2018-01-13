@@ -3,10 +3,10 @@
 
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>Penoxtiline</defName>
-    <label>penoxtiline</label>
-    <description>A successor to Penoxycyline. This antibiotic protects against a wider range of diseases, but requires more frequent doeses. Has no effect against pre-existing diseases</description>
+    <label>Penoxtiline</label>
+    <description>A successor to Penoxycyline. This antibiotic protects against a wider range of diseases, but requires more frequent doeses. Has no effect against pre-existing diseases.</description>
     <graphicData>
-      <texPath>Things/Item/Drug/Penoxycyline</texPath> <!-- Placeholder texture! -->
+      <texPath>Things/Item/Drug/Penoxtiline</texPath> <!-- Placeholder texture! -->
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <socialPropernessMatters>false</socialPropernessMatters>
@@ -51,7 +51,7 @@
   <HediffDef>
     <defName>PenoxtilineHigh</defName>
     <hediffClass>HediffWithComps</hediffClass>
-    <label>penoxtiline</label>
+    <label>Penoxtiline</label>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>

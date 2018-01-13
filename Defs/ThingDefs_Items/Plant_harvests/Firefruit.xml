@@ -3,11 +3,16 @@
 
   <ThingDef ParentName="PharmaPlantEdible">
     <defName>Firefruit</defName>
-    <label>firefruit</label>
-    <description>fruit from a firefruit tree (go figure). Very spicy.</description>
+    <label>Firefruit</label>
+    <description>Fruit from a Firefruit tree. Very spicy.</description>  
     <graphicData>
-      <texPath>Things/Item/Resource/PlantFoodRaw/Firefruit</texPath> <!--Placeholder Texture-->
+      <texPath>Things/Item/Resource/PlantFoodRaw/Firefruit</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
+    <!--<graphicData>
+      <texPath>Things/Item/Drug/Numbicaine</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>-->
     <statBases>
       <MarketValue>5</MarketValue>
     </statBases>
