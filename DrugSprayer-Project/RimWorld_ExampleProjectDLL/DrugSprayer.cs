@@ -24,22 +24,40 @@ namespace Pharma
     {
         public Building_DrugSprayer()
         {
-            this.TryGetComp<CompDrugSprayer>().SetRange(10f);
+
+            Log.Message("[Pharma] Created drug sprayer.");
+             // testing remove tk
+            //this.TryGetComp<CompDrugSprayer>().SetRange(10f);
         }
 
         public override bool IsAcceptableAmmoToSpray(ThingDef thing)
         {
-            if(thing.IsDrug)
+            Log.Message("[Pharma] Checking is acceptable ammo.");
+            if (thing.IsDrug)
             {
                 return true;
             }
             return false;
 
         }
+        public override void Tick()
+        {
+            Log.Message("[Pharma] Drug sprayer tick.");
+            base.Tick();
+         }
+
     }
 
     public class CompDrugSprayer : ThingComp
     {
+        public override void CompTick()
+        {
+            Log.Message("[Pharma] Drug sprayer comp tick.");
+
+            if (base.parent.Spawned)
+            {
+            }
+        }
         public void SetRange(float newrange)
         {
             Props.range = newrange;
@@ -54,18 +72,59 @@ namespace Pharma
 
     }
 
+
+
+    public class CompIngestibleSprayer : ThingComp
+    {
+        public override void CompTick()
+        {
+            Log.Message("[Pharma] Ingestible sprayer comp tick.");
+
+            if (base.parent.Spawned)
+            {
+            }
+        }
+        public void SetRange(float newrange)
+        {
+            Props.range = newrange;
+        }
+        private CompProperties_IngestibleSprayer Props
+        {
+            get
+            {
+                return (CompProperties_IngestibleSprayer)base.props;
+            }
+        }
+
+    }
+
     public class CompProperties_DrugSprayer : CompProperties_IngestibleSprayer
     {
         public CompProperties_DrugSprayer()
         {
+            Log.Message("[Pharma] Drug sprayer comp created.");
+
             compClass = typeof(CompDrugSprayer);
+
+            Log.Message("[Pharma] Drug sprayer comp class set.");
+
         }
-       
+
     }
 
 
     public class CompProperties_IngestibleSprayer : CompProperties
     {
+        public CompProperties_IngestibleSprayer()
+        {
+
+            Log.Message("[Pharma] Ingest sprayer comp created.");
+
+            compClass = typeof(CompIngestibleSprayer);
+
+            Log.Message("[Pharma] Ingest sprayer comp class set.");
+
+        }
         public float range;
     }
 }

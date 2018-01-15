@@ -21,11 +21,15 @@ namespace Pharma
         /// </summary>
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
+            Log.Message("[Pharma] IngestibleSprayer: Spawn setup");
+
             base.SpawnSetup(map, respawningAfterLoad);
 
             powerComp = base.GetComp<CompPowerTrader>();
             powerComp.PowerOn = true;
-            
+
+            Log.Message("[Pharma] IngestibleSprayer: Spawn setup end.");
+
         }
 
 
@@ -77,6 +81,8 @@ namespace Pharma
 
         public virtual bool TrySpray(Pawn p)
         {
+            Log.Message("[Pharma] IngestibleSprayer: Begin TrySpray.");
+
             bool administer;
 
             administer = false;
@@ -89,22 +95,30 @@ namespace Pharma
                 Spray(p);
                 return true;
             }
+            Log.Message("[Pharma] IngestibleSprayer: Could not Spray this pawn.");
+
             return false;
         }
 
 
         public override void Tick()
         {
-            /*
+            Log.Message("[Pharma] IngestibleSprayer: Begin Tick.");
+
             base.Tick();
+            Log.Message("[Pharma] IngestibleSprayer: Tick - Getting Map.");
+
 
             Map map = base.Map;
 
             //Pawn[] pawns = Pharma_Utility.GetPawnsInRange(range);
+            Log.Message("[Pharma] IngestibleSprayer: Tick - Beginning check spray.");
+
             if (this.CanDispenseNow)
             {
                 foreach (Pawn p in map.mapPawns.AllPawnsSpawned)
                 {
+                    Log.Message("[Pharma] IngestibleSprayer: Attempting Spray.");
                     if (!TrySpray(p))
                     {
                         Log.Message("Could not spray pawn with thing.");
@@ -112,7 +126,6 @@ namespace Pharma
 
                 }
             }
-            */
 
         }
 
@@ -126,6 +139,7 @@ namespace Pharma
         {
             get
             {
+                Log.Message("[Pharma] IngestibleSprayer: Getting CanDispenseNow.");
                 return this.powerComp.PowerOn && this.HasEnoughAmmoInHoppers();
             }
         }
@@ -134,6 +148,7 @@ namespace Pharma
         {
             get
             {
+                Log.Message("[Pharma] IngestibleSprayer: Getting AdjCellsCerdinalInBounds.");
                 if (this.cachedAdjCellsCardinal == null)
                 {
                     this.cachedAdjCellsCardinal = (from c in GenAdj.CellsAdjacentCardinal(this)
@@ -149,6 +164,8 @@ namespace Pharma
         {
             get
             {
+                Log.Message("[Pharma] Getting DispensableDef.");
+
                 ThingDef spraydef = FindAmmoInAnyHopper().def;
                 if (IsAcceptableAmmoToSpray(spraydef))
                 {
@@ -161,6 +178,7 @@ namespace Pharma
 
         public virtual bool HasEnoughAmmoInHoppers()
         {
+            Log.Message("[Pharma] IngestibleSprayer: Checking Has Enough Hopper Ammo.");
             float num = 0f;
             for (int i = 0; i < this.AdjCellsCardinalInBounds.Count; i++)
             {
@@ -186,23 +204,34 @@ namespace Pharma
                 }
                 if (num >= base.def.building.nutritionCostPerDispense)
                 {
+                    Log.Message("[Pharma] IngestibleSprayer: Has enough ammp.");
+
                     return true;
                 }
             }
+            Log.Message("[Pharma] IngestibleSprayer: Does not have enough ammo.");
+
             return false;
         }
 
         public virtual Building AdjacentReachableHopper(Pawn reacher)
         {
+            Log.Message("[Pharma] IngestibleSprayer: Finding AdjacentReachableHopper.");
+
             for (int i = 0; i < this.AdjCellsCardinalInBounds.Count; i++)
             {
                 IntVec3 c = this.AdjCellsCardinalInBounds[i];
                 Building edifice = c.GetEdifice(base.Map);
                 if (edifice != null && edifice.def == ThingDefOf.Hopper && reacher.CanReach(edifice, PathEndMode.Touch, Danger.Deadly, false, TraverseMode.ByPawn))
                 {
+                    Log.Message("[Pharma] IngestibleSprayer: Found hopper.");
+
                     return (Building_Storage)edifice;
+
                 }
             }
+            Log.Message("[Pharma] IngestibleSprayer: Did not find hopper.");
+
             return null;
         }
 
@@ -210,6 +239,8 @@ namespace Pharma
 
         public void Spray(Pawn pawn)
         {
+            Log.Message("[Pharma] IngestibleSprayer: Spraying Ammo at pawn.");
+
             //this.TryGetComp<CompProperties_DrugSprayer>().range;
             //Props.ingestible.Ingested(pawn, 0f);
             FindAmmoInAnyHopper().Ingested(pawn, 0f);
@@ -219,6 +250,8 @@ namespace Pharma
 
         public virtual Thing FindAmmoInAnyHopper()
         {
+            Log.Message("[Pharma] IngestibleSprayer: Finding Ammo.");
+
             for (int i = 0; i < this.AdjCellsCardinalInBounds.Count; i++)
             {
                 Thing thing = null;
