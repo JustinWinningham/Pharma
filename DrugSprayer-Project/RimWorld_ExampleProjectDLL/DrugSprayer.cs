@@ -14,11 +14,7 @@ namespace Pharma
 
     public class CompTest : ThingComp
     {
-
-        private int plantHarmAge;
-
-        private int ticksToPlantHarm;
-
+        
         protected CompProperties_Test PropsTest
         {
             get
