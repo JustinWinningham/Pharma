@@ -203,12 +203,7 @@ namespace Pharma
                 }
                 if (thing != null && thing2 != null)
                 {
-                    num += (float)thing.stackCount * thing.def.ingestible.nutrition;
-                }
-                if (num >= base.def.building.nutritionCostPerDispense)
-                {
-                    Log.Message("[Pharma] IngestibleSprayer: Has enough ammp.");
-
+                    Log.Message("[Pharma] IngestibleSprayer: Found things in hoppers.");
                     return true;
                 }
             }
