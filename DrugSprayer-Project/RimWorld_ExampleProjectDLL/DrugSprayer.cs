@@ -10,6 +10,52 @@ using RimWorld;
 
 namespace Pharma
 {
+
+
+    public class CompTest : ThingComp
+    {
+
+        private int plantHarmAge;
+
+        private int ticksToPlantHarm;
+
+        protected CompProperties_Test PropsTest
+        {
+            get
+            {
+                return (CompProperties_Test)base.props;
+            }
+        }
+
+        public override void PostExposeData()
+        {
+            // do for each comp property
+            //Scribe_Values.Look<int>(ref this.plantHarmAge, "plantHarmAge", 0, false);
+            //Scribe_Values.Look<int>(ref this.ticksToPlantHarm, "ticksToPlantHarm", 0, false);
+        }
+
+        public override void CompTick()
+        {
+
+            Log.Message("[Pharma] test comp tick.");
+            TestCompFunction();
+        }
+
+        private void TestCompFunction()
+        {
+
+            Log.Message("[Pharma] test comp function.");
+        }
+    }
+
+    public class CompProperties_Test : CompProperties
+    {
+        public CompProperties_Test()
+        {
+            Log.Message("[Pharma] test comp properties.");
+            base.compClass = typeof(CompTest);
+        }
+    }
     /*
     public static class Pharma_ThingDefOf
     {
@@ -22,9 +68,9 @@ namespace Pharma
     [StaticConstructorOnStartup]
     public class Building_DrugSprayer : Building_IngestibleSprayer
     {
-        public Building_DrugSprayer()
+        public Building_DrugSprayer() : base()
         {
-
+            
             Log.Message("[Pharma] Created drug sprayer.");
              // testing remove tk
             //this.TryGetComp<CompDrugSprayer>().SetRange(10f);
