@@ -13,7 +13,10 @@ namespace Pharma
     [StaticConstructorOnStartup]
     public abstract class Building_IngestibleSprayer : Building
     {
-        
+        public Building_IngestibleSprayer() : base()
+        {
+
+        }
         // ==================================
 
         /// <summary>
