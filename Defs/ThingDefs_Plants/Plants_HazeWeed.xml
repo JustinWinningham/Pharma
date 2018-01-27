@@ -9,7 +9,7 @@
       <MaxHitPoints>40</MaxHitPoints>
     </statBases>
     <graphicData>
-      <texPath>Things/Plant/HazeweedPlant</texPath>
+      <texPath>Things/Plant/HazeWeedPlant</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <selectable>true</selectable>

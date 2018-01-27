@@ -4,15 +4,16 @@
   <ThingDef ParentName="PharmaPlantEdible">
     <defName>RawHazeweed</defName>
     <label>hazeweed</label>
-    <description>A cluster of hazeweed leaves. The plant has a mild calming effect when ingested.</description>
+    <description>A cluster of hazeweed leaves. The plant has a mild calming effect.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/PlantFoodRaw/PowderLeaf</texPath>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Hazeweed</texPath>
     </graphicData>
     <statBases>
       <MarketValue>2</MarketValue>
     </statBases>
     <ingestible>
       <foodType>VegetableOrFruit</foodType>
+	  <preferability>RawTasty</preferability>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -21,5 +22,4 @@
       </li>
     </comps>
   </ThingDef>
-  
 </Defs>

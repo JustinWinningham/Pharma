@@ -104,7 +104,7 @@ namespace Pharma
                 Building_DrugSprayer.SprayerLog("Exception caught checking if pawn has ingestible effect: " + e.Message);
                 throw (e);
             }
-            Log.Message("Checking effect - No Ingest outcome found: object is null ");
+            Building_DrugSprayer.SprayerLog("Checking effect - No Ingest outcome found: object is null ");
             return false;
         }
 
