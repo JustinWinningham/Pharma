@@ -10,7 +10,7 @@ using RimWorld;
 
 namespace Pharma
 {
-
+   /*
 
     public class CompTest : ThingComp
     {
@@ -33,14 +33,14 @@ namespace Pharma
         public override void CompTick()
         {
 
-            Log.Message("[Pharma] test comp tick.");
+            Building_IngestibleSprayer.SprayerLog("[Pharma] test comp tick.");
             TestCompFunction();
         }
 
         private void TestCompFunction()
         {
 
-            Log.Message("[Pharma] test comp function.");
+            Building_IngestibleSprayer.SprayerLog("[Pharma] test comp function.");
         }
     }
 
@@ -48,10 +48,11 @@ namespace Pharma
     {
         public CompProperties_Test()
         {
-            Log.Message("[Pharma] test comp properties.");
+            Building_IngestibleSprayer.SprayerLog("[Pharma] test comp properties.");
             base.compClass = typeof(CompTest);
         }
     }
+    */
     /*
     public static class Pharma_ThingDefOf
     {
@@ -67,34 +68,38 @@ namespace Pharma
         public Building_DrugSprayer() : base()
         {
             
-            Log.Message("[Pharma] Created drug sprayer.");
+            SprayerLog("Created drug sprayer.");
              // testing remove tk
             //this.TryGetComp<CompDrugSprayer>().SetRange(10f);
         }
 
         public override bool IsAcceptableAmmoToSpray(ThingDef thing)
         {
-            Log.Message("[Pharma] Checking is acceptable ammo.");
+            SprayerLog("Checking is acceptable ammo.");
             if (thing.IsDrug)
             {
+                SprayerLog("acceptable.");
                 return true;
             }
+            SprayerLog("not acceptable.");
+
             return false;
 
         }
         public override void Tick()
         {
-            Log.Message("[Pharma] Drug sprayer tick.");
+            SprayerLog("Drug sprayer tick.");
             base.Tick();
          }
 
     }
+    /*
 
     public class CompDrugSprayer : ThingComp
     {
         public override void CompTick()
         {
-            Log.Message("[Pharma] Drug sprayer comp tick.");
+            Building_IngestibleSprayer.SprayerLog("Drug sprayer comp tick.");
 
             if (base.parent.Spawned)
             {
@@ -120,7 +125,7 @@ namespace Pharma
     {
         public override void CompTick()
         {
-            Log.Message("[Pharma] Ingestible sprayer comp tick.");
+            Building_IngestibleSprayer.SprayerLog("Ingestible sprayer comp tick.");
 
             if (base.parent.Spawned)
             {
@@ -144,11 +149,11 @@ namespace Pharma
     {
         public CompProperties_DrugSprayer()
         {
-            Log.Message("[Pharma] Drug sprayer comp created.");
+            Building_IngestibleSprayer.SprayerLog("[Pharma] Drug sprayer comp created.");
 
             compClass = typeof(CompDrugSprayer);
 
-            Log.Message("[Pharma] Drug sprayer comp class set.");
+            Building_IngestibleSprayer.SprayerLog("[Pharma] Drug sprayer comp class set.");
 
         }
 
@@ -160,13 +165,14 @@ namespace Pharma
         public CompProperties_IngestibleSprayer()
         {
 
-            Log.Message("[Pharma] Ingest sprayer comp created.");
+            Building_IngestibleSprayer.SprayerLog("Ingest sprayer comp created.");
 
             compClass = typeof(CompIngestibleSprayer);
 
-            Log.Message("[Pharma] Ingest sprayer comp class set.");
+            Building_IngestibleSprayer.SprayerLog("Ingest sprayer comp class set.");
 
         }
         public float range;
     }
+    */
 }
