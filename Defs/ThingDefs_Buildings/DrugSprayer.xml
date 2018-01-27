@@ -4,7 +4,7 @@
 <ThingDef ParentName="BuildingBase">
   <defName>DrugSprayer</defName>
     <label>drug sprayer</label>
-    <description>A device that sprays drugs into the air.</description>
+    <description>A device that sprays drugs into the air. Requires a drug hopper for storage in order to function.</description>
   <thingClass>Pharma.Building_DrugSprayer</thingClass>
     <graphicData>
       <texPath>Things/Building/DrugSprayer/DrugSprayer</texPath>
@@ -57,6 +57,7 @@
     <minifiedDef>MinifiedFurniture</minifiedDef>
     <specialDisplayRadius>5</specialDisplayRadius>
     <tradeability>Sellable</tradeability>
+	<researchPrerequisites><li>DrugSprayer</li></researchPrerequisites>
   </ThingDef>
 
 
@@ -115,13 +116,15 @@
     <tickerType>Never</tickerType>
     <rotatable>true</rotatable>
     <neverMultiSelect>true</neverMultiSelect>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <staticSunShadowHeight>0.3</staticSunShadowHeight>
     <surfaceType>Item</surfaceType>
     <placeWorkers>
       <li>PlaceWorker_NextToHopperAccepter</li>
     </placeWorkers>
     <constructEffect>ConstructMetal</constructEffect>
+	<researchPrerequisites><li>DrugSprayer</li></researchPrerequisites>
+
   </ThingDef>
 
 </Defs>
