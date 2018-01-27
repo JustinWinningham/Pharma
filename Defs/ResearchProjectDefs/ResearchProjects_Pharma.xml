@@ -149,5 +149,21 @@
         <researchViewY>4</researchViewY>
         <tab>Pharma</tab>
     </ResearchProjectDef>
+<ResearchProjectDef>
+        <defName>DrugSprayer</defName>
+        <label>Drug sprayers</label>
+        <description>Construct buildings that can administer drugs through the air.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>2</researchViewX>
+        <researchViewY>1</researchViewY>
+        <tab>Pharma</tab>
+    </ResearchProjectDef>
 
 </Defs>

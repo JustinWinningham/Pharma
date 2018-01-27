@@ -1,0 +1,5 @@
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\bin\Debug\RimWorldExampleProjectDLL.dll
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\bin\Debug\RimWorldExampleProjectDLL.pdb
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\obj\Debug\RimWorld_ExampleProjectDLL.csprojResolveAssemblyReference.cache
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\obj\Debug\RimWorldExampleProjectDLL.dll
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\obj\Debug\RimWorldExampleProjectDLL.pdb
