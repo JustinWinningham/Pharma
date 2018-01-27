@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,12 +12,72 @@ using RimWorld;
 
 namespace Pharma
 {
+
     [StaticConstructorOnStartup]
     public abstract class Building_IngestibleSprayer : Building
     {
+        const float radius = 5f;
+
+        public static void SprayerLog(string log)
+        {
+            Pharma_Util.PharmaLog(Pharma_Util.TESTING_SPRAYER,"[IngestibleSprayer] "+log);
+        }
+
         public Building_IngestibleSprayer() : base()
         {
 
+        }
+
+
+        public override void Tick()
+        {
+            try
+            {
+
+                SprayerLog("Begin Tick.");
+
+                base.Tick();
+                SprayerLog("Tick - Getting Map.");
+
+
+                Map map = base.Map;
+
+                //Pawn[] pawns = Pharma_Util.GetPawnsInRange(range);
+                SprayerLog("Tick - Beginning check spray.");
+
+                if (this.CanDispenseNow)
+                {
+                    SprayerLog("Can dispense now!");
+                    IntVec3 c = base.Position;
+                    float dist;
+                    foreach (Pawn p in map.mapPawns.AllPawnsSpawned)
+                    {
+                        dist = c.DistanceTo(p.Position);
+                        if(dist <= radius)
+                        {
+                            if (p.def.race.IsFlesh)
+                            {
+
+                                SprayerLog("FOUND NEARBY PAWN TO SPRAY!");
+                                if (!TrySpray(p))
+                                {
+                                    SprayerLog("Could not spray pawn with thing.");
+                                }
+
+                                //float dist = planet.WorldGrid.ApproxDistanceInTiles(p.Tile,)
+                                //  this.Tile
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                SprayerLog("Exception thrown while Ticking ingestibleSprayer!");
+                throw e;
+            }
         }
         // ==================================
 
@@ -24,18 +86,17 @@ namespace Pharma
         /// </summary>
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            Log.Message("[Pharma] IngestibleSprayer: Spawn setup");
+            SprayerLog("Spawn setup");
 
             base.SpawnSetup(map, respawningAfterLoad);
 
             powerComp = base.GetComp<CompPowerTrader>();
             powerComp.PowerOn = true;
 
-            Log.Message("[Pharma] IngestibleSprayer: Spawn setup end.");
+            SprayerLog("Spawn setup end.");
 
         }
-
-
+        
         /// <summary>
         /// To save and load actual values (savegame-data)
         /// </summary>
@@ -84,53 +145,31 @@ namespace Pharma
 
         public virtual bool TrySpray(Pawn p)
         {
-            Log.Message("[Pharma] IngestibleSprayer: Begin TrySpray.");
+            SprayerLog("Begin TrySpray.");
 
             bool administer;
 
             administer = false;
-            if (!Pharma_Utility.PawnHasIngestibleEffect(p, FindAmmoInAnyHopper()))
+            Thing ammo = FindAmmoInAnyHopper();
+            if(ammo != null)
             {
-                administer = true;
+                if (!Pharma_Util.PawnHasIngestibleEffect(p, ammo.def))
+                {
+                    administer = true;
+                }
+                if (administer)
+                {
+                    Spray(p);
+                    return true;
+                }
+                SprayerLog("Could not Spray this pawn.");
+
             }
-            if (administer)
-            {
-                Spray(p);
-                return true;
-            }
-            Log.Message("[Pharma] IngestibleSprayer: Could not Spray this pawn.");
 
             return false;
         }
 
 
-        public override void Tick()
-        {
-            Log.Message("[Pharma] IngestibleSprayer: Begin Tick.");
-
-            base.Tick();
-            Log.Message("[Pharma] IngestibleSprayer: Tick - Getting Map.");
-
-
-            Map map = base.Map;
-
-            //Pawn[] pawns = Pharma_Utility.GetPawnsInRange(range);
-            Log.Message("[Pharma] IngestibleSprayer: Tick - Beginning check spray.");
-
-            if (this.CanDispenseNow)
-            {
-                foreach (Pawn p in map.mapPawns.AllPawnsSpawned)
-                {
-                    Log.Message("[Pharma] IngestibleSprayer: Attempting Spray.");
-                    if (!TrySpray(p))
-                    {
-                        Log.Message("Could not spray pawn with thing.");
-                    }
-
-                }
-            }
-
-        }
 
         public CompPowerTrader powerComp;
 
@@ -142,7 +181,7 @@ namespace Pharma
         {
             get
             {
-                Log.Message("[Pharma] IngestibleSprayer: Getting CanDispenseNow.");
+                SprayerLog("Getting CanDispenseNow.");
                 return this.powerComp.PowerOn && this.HasEnoughAmmoInHoppers();
             }
         }
@@ -151,7 +190,7 @@ namespace Pharma
         {
             get
             {
-                Log.Message("[Pharma] IngestibleSprayer: Getting AdjCellsCerdinalInBounds.");
+                SprayerLog("Getting AdjCellsCerdinalInBounds.");
                 if (this.cachedAdjCellsCardinal == null)
                 {
                     this.cachedAdjCellsCardinal = (from c in GenAdj.CellsAdjacentCardinal(this)
@@ -167,68 +206,79 @@ namespace Pharma
         {
             get
             {
-                Log.Message("[Pharma] Getting DispensableDef.");
+                SprayerLog("Getting DispensableDef.");
 
-                ThingDef spraydef = FindAmmoInAnyHopper().def;
-                if (IsAcceptableAmmoToSpray(spraydef))
+                Thing ammo = FindAmmoInAnyHopper();
+                if(ammo != null)
                 {
-                    return spraydef;
+
+                    ThingDef spraydef = FindAmmoInAnyHopper().def;
+                    if (IsAcceptableAmmoToSpray(spraydef))
+                    {
+                        return spraydef;
+                    }
                 }
                 return null;
+
             }
         }
 
 
         public virtual bool HasEnoughAmmoInHoppers()
         {
-            Log.Message("[Pharma] IngestibleSprayer: Checking Has Enough Hopper Ammo.");
-            float num = 0f;
-            for (int i = 0; i < this.AdjCellsCardinalInBounds.Count; i++)
+            SprayerLog("HasEnoughAmmoInHoppers - Checking Items in adjacent cells.");
+            List<IntVec3> adjcells = this.AdjCellsCardinalInBounds;
+            for (int i = 0; i < adjcells.Count; i++)
             {
-                IntVec3 c = this.AdjCellsCardinalInBounds[i];
-                Thing thing = null;
-                Thing thing2 = null;
+                IntVec3 c = adjcells[i];
+                Thing itemadj = null;
+                Thing hopperadj = null;
                 List<Thing> thingList = c.GetThingList(base.Map);
                 for (int j = 0; j < thingList.Count; j++)
                 {
-                    Thing thing3 = thingList[j];
-                    if (IsAcceptableAmmoToSpray(thing3.def))
+                    SprayerLog("Checking item "+j+":"+i +": "+ thingList[j].ToString());
+                    Thing currentthing = thingList[j];
+                    if (IsAcceptableAmmoToSpray(currentthing.def))
                     {
-                        thing = thing3;
+                        SprayerLog("Found a valid item to spray.");
+
+                        itemadj = currentthing;
                     }
-                    if (thing3.def == ThingDefOf.Hopper)
+                    if (currentthing.def.defName == "DrugHopper")
                     {
-                        thing2 = thing3;
+                        SprayerLog("Found a drug hopper.");
+
+                        hopperadj = currentthing;
                     }
                 }
-                if (thing != null && thing2 != null)
+                if (itemadj != null && hopperadj != null)
                 {
-                    Log.Message("[Pharma] IngestibleSprayer: Found things in hoppers.");
+                    SprayerLog("Found things in hoppers.");
                     return true;
                 }
             }
-            Log.Message("[Pharma] IngestibleSprayer: Does not have enough ammo.");
+            SprayerLog("[Pharma] IngestibleSprayer: Does not have enough ammo.");
 
             return false;
         }
 
         public virtual Building AdjacentReachableHopper(Pawn reacher)
         {
-            Log.Message("[Pharma] IngestibleSprayer: Finding AdjacentReachableHopper.");
+            SprayerLog("Finding AdjacentReachableHopper.");
 
             for (int i = 0; i < this.AdjCellsCardinalInBounds.Count; i++)
             {
                 IntVec3 c = this.AdjCellsCardinalInBounds[i];
                 Building edifice = c.GetEdifice(base.Map);
-                if (edifice != null && edifice.def == ThingDefOf.Hopper && reacher.CanReach(edifice, PathEndMode.Touch, Danger.Deadly, false, TraverseMode.ByPawn))
+                if (edifice != null && edifice.def.defName == "DrugHopper" && reacher.CanReach(edifice, PathEndMode.Touch, Danger.Deadly, false, TraverseMode.ByPawn))
                 {
-                    Log.Message("[Pharma] IngestibleSprayer: Found hopper.");
+                    SprayerLog("Found hopper.");
 
                     return (Building_Storage)edifice;
 
                 }
             }
-            Log.Message("[Pharma] IngestibleSprayer: Did not find hopper.");
+            SprayerLog("Did not find hopper.");
 
             return null;
         }
@@ -237,21 +287,43 @@ namespace Pharma
 
         public void Spray(Pawn pawn)
         {
-            Log.Message("[Pharma] IngestibleSprayer: Spraying Ammo at pawn.");
+            if(pawn != null)
+            {
+                SprayerLog("Spraying Ammo at pawn: " + pawn.Name);
 
-            //this.TryGetComp<CompProperties_DrugSprayer>().range;
-            //Props.ingestible.Ingested(pawn, 0f);
-            FindAmmoInAnyHopper().Ingested(pawn, 0f);
+                //this.TryGetComp<CompProperties_DrugSprayer>().range;
+                //Props.ingestible.Ingested(pawn, 0f);
+                Thing ammo = FindAmmoInAnyHopper();
+                if (ammo != null)
+                {
+
+                    ammo.Ingested(pawn, 0f);
+                }
+                else
+                {
+                    Building_DrugSprayer.SprayerLog("ERROR Tried to spray.. but ammo Thing was null!");
+
+
+                }
+                //FindAmmoInAnyHopper().inge
+
+            }
+            else
+            {
+                Building_DrugSprayer.SprayerLog("ERROR Pawn was null... Could not spray");
+            }
 
 
         }
 
         public virtual Thing FindAmmoInAnyHopper()
         {
-            Log.Message("[Pharma] IngestibleSprayer: Finding Ammo.");
+            SprayerLog("Finding Ammo.");
+            int adjcellsno = this.AdjCellsCardinalInBounds.Count;
 
-            for (int i = 0; i < this.AdjCellsCardinalInBounds.Count; i++)
+            for (int i = 0; i < adjcellsno; i++)
             {
+                SprayerLog("Finding Ammo in cardinal cell "+i);
                 Thing thing = null;
                 Thing thing2 = null;
                 List<Thing> thingList = this.AdjCellsCardinalInBounds[i].GetThingList(base.Map);
@@ -260,18 +332,23 @@ namespace Pharma
                     Thing thing3 = thingList[j];
                     if (IsAcceptableAmmoToSpray(thing3.def))
                     {
+                        SprayerLog("Found acceptable thing - ammo");
                         thing = thing3;
                     }
-                    if (thing3.def == ThingDefOf.Hopper)
+                    if (thing3.def.defName == "DrugHopper")
                     {
+                        SprayerLog("Found acceptable thing - hopper");
                         thing2 = thing3;
                     }
                 }
                 if (thing != null && thing2 != null)
                 {
+
+                    SprayerLog("Found thing and hopper");
                     return thing;
                 }
             }
+            SprayerLog("Could not find thing and hopper");
             return null;
         }
 
