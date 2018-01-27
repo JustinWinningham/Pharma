@@ -86,7 +86,6 @@
             <li>Drugs</li>
           </categories>
           <disallowedSpecialFilters>
-            <li>AllowPlantFood</li>
           </disallowedSpecialFilters>
         </filter>
       </fixedStorageSettings>
@@ -94,11 +93,8 @@
         <priority>Important</priority>
         <filter>
           <categories>
-            <li>FoodRaw</li>
           </categories>
           <exceptedThingDefs>
-            <li>Human_Meat</li>
-            <li>Megaspider_Meat</li>
           </exceptedThingDefs>
         </filter>
       </defaultStorageSettings>
@@ -112,7 +108,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>Holds resources for use by machines like nutrient paste dispensers.</description>
+    <description>Holds drugs for use by machines like drug sprayers.</description>
     <costList>
       <Steel>15</Steel>
     </costList>
