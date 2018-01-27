@@ -1,0 +1,13 @@
+C:\Users\elizabeth\Desktop\ExampleDllMod-master\RimWorld_ExampleProjectDLL\bin\Debug\RimWorldExampleProjectDLL.dll
+C:\Users\elizabeth\Desktop\ExampleDllMod-master\RimWorld_ExampleProjectDLL\bin\Debug\RimWorldExampleProjectDLL.pdb
+C:\Users\elizabeth\Desktop\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\RimWorld_ExampleProjectDLL.csprojResolveAssemblyReference.cache
+C:\Users\elizabeth\Desktop\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\RimWorldExampleProjectDLL.dll
+C:\Users\elizabeth\Desktop\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\RimWorldExampleProjectDLL.pdb
+E:\Git\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\RimWorld_ExampleProjectDLL.csprojResolveAssemblyReference.cache
+E:\Git\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\RimWorldExampleProjectDLL.dll
+E:\Git\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\RimWorldExampleProjectDLL.pdb
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\obj\Debug\RimWorldExampleProjectDLL.dll
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\obj\Debug\RimWorldExampleProjectDLL.pdb
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\bin\Debug\RimWorldExampleProjectDLL.dll
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\bin\Debug\RimWorldExampleProjectDLL.pdb
+E:\Git\RimWorldPharma\Pharma\DrugSprayer-Project\RimWorld_ExampleProjectDLL\obj\Debug\RimWorld_ExampleProjectDLL.csprojResolveAssemblyReference.cache
