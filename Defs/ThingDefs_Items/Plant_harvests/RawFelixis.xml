@@ -2,23 +2,21 @@
 <Defs>
 
   <ThingDef ParentName="PharmaPlantEdible">
-    <defName>Firefruit</defName>
-    <label>Firefruit</label>
-    <description>Fruit from a Firefruit tree. Very spicy.</description>
+    <defName>RawFelixis</defName>
+    <label>Felixis</label>
+    <description>Felixis Mushrooms.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/PlantFoodRaw/Firefruit</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Felixis</texPath>
     </graphicData>
     <statBases>
-      <MarketValue>5</MarketValue>
+      <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
       <foodType>VegetableOrFruit</foodType>
-	  <nutrition>0.12</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>6</daysToRotStart>
+        <daysToRotStart>7</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
