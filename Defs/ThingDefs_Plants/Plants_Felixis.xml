@@ -18,6 +18,7 @@
       <nutrition>0.30</nutrition>
     </ingestible>
     <plant>
+		<maxMeshCount>4</maxMeshCount>
 		<fertilitySensitivity>0.4</fertilitySensitivity>
 		<growDays>20</growDays>
 		<dieIfLeafless>true</dieIfLeafless>
@@ -31,8 +32,8 @@
 		</sowTags>
 		<topWindExposure>0.2</topWindExposure>
 		<visualSizeRange>
-			<min>0.1</min>
-			<max>0.4</max>
+			<min>0.4</min>
+			<max>0.7</max>
 		</visualSizeRange>
 	</plant>
   </ThingDef>

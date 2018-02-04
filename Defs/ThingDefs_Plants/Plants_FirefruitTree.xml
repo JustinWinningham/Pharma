@@ -58,7 +58,7 @@
     <label>Firefruit Tree</label>
     <description>A sweet smelling tree that grows in dry territories. Bears Firefruit, but little useable wood</description>
     <graphicData>
-      <texPath>Things/Plant/TreeBirch</texPath>
+      <texPath>Things/Plant/FireFruitPlant</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.15, 0.3, 0.1)</volume>

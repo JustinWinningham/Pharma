@@ -6,8 +6,7 @@
     <label>Felixis</label>
     <description>Felixis Mushrooms.</description>
     <graphicData>
-      <!-- <texPath>Things/Item/Resource/PlantFoodRaw/Felixis</texPath> -- THIS IS WHERE IT SHOULD BE ONCE COMPLETED -->
-      <texPath>Things/Plant/FelixisPlant</texPath>
+      <texPath>Things/Item/Resource/PlantFoodRaw/PowderLeaf</texPath>
     </graphicData>
     <statBases>
       <MarketValue>6</MarketValue>
