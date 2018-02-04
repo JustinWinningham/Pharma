@@ -3,7 +3,7 @@
 
   <ThingDef ParentName="PlantBase">
     <defName>Hazeweed</defName>
-    <label>hazeweed plant</label>
+    <label>Hazeweed Plant</label>
     <description>A small leafy plant that changes colour from blue to purple as it ripens. It has a mild calming effect.</description>
     <statBases>
       <MaxHitPoints>40</MaxHitPoints>

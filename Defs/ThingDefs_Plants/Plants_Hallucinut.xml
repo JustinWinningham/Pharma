@@ -3,7 +3,7 @@
 
   <ThingDef ParentName="PlantBase">
     <defName>Hallucinut</defName>
-    <label>Hallucinut plant</label>
+    <label>Hallucinut Plant</label>
     <description>A nut bearing bush that contains hallucigenic properties. Fragile.</description>
     <statBases>
       <MaxHitPoints>70</MaxHitPoints>

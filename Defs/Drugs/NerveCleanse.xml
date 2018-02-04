@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>NerveCleanse</defName>
-    <label>nervecleanse</label>
-    <description>A non-habit forming drug that supresses physical pain for a short amount of time.</description>
+    <label>Nerve Cleanse</label>
+    <description>A non-habit forming pill that supresses physical pain for a short amount of time.</description>
     <graphicData>
       <texPath>Things/Item/Drug/NerveCleanse</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

@@ -78,7 +78,7 @@
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_NumbicaineRifle</defName>
-    <label>numbicaine rifle</label>
+    <label>Numbicaine Rifle</label>
     <description>Fires syringes full of Numbicaine. Useful for keeping colonists fighting longer than they normally would be able to.</description>
     <graphicData>
       <texPath>Things/Item/Weps/Guns/NumbicaineRifle</texPath>

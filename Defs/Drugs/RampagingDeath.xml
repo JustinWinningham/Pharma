@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>RampagingDeath</defName>
     <label>Rampaging Death</label>
-    <description>A powerful narcotic that grants the patient superhuman abilities for a short time, before falling over dead.</description>
+    <description>A powerful narcotic that grants the user superhuman abilities for a short time, before falling over dead.</description>
     <graphicData>
       <texPath>Things/Item/Drug/RampagingDeath</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

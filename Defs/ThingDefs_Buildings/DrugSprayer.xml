@@ -3,7 +3,7 @@
 <Defs>
 <ThingDef ParentName="BuildingBase">
   <defName>DrugSprayer</defName>
-    <label>drug sprayer</label>
+    <label>Drug Sprayer</label>
     <description>A device that sprays drugs into the air. Requires a drug hopper for storage in order to function.</description>
   <thingClass>Pharma.Building_DrugSprayer</thingClass>
     <graphicData>

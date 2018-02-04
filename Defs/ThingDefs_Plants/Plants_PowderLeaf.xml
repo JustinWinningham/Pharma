@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="PlantBase">
     <defName>PowderLeaf</defName>
-    <label>powderleaf plant</label>
-    <description>A large, aloe like succulent. The powder on its leaves gives a mild numbing effect when consumed, hence the name. Fragile.</description>
+    <label>Powderleaf Plant</label>
+    <description>A large, aloe like succulent. The powder on its leaves gives a mild numbing effect when consumed.</description>
     <statBases>
       <MaxHitPoints>40</MaxHitPoints>
     </statBases>

@@ -3,7 +3,7 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>SmokeLeafBrownie</defName>
-    <label>Smokeleaf brownie</label>
+    <label>Smokeleaf Brownie</label>
     <description>A delicious brownie with some Smokeleaf baked in.</description>
     <graphicData>
       <texPath>Things/Item/Resource/FoodStuffs/SmokeleafBrownie</texPath> <!--Things/Item/Resource/PlantFoodRaw/Firefruit-->

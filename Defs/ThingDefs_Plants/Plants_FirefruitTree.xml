@@ -55,8 +55,8 @@
 
   <ThingDef ParentName="PharmaTreeBase1">
     <defName>FirefruitTree</defName>
-    <label>Firefruit tree</label>
-    <description>A sweet smelling tree that grows in dry territories. bears spicy fruit, but little useable wood</description>
+    <label>Firefruit Tree</label>
+    <description>A sweet smelling tree that grows in dry territories. Bears Firefruit, but little useable wood</description>
     <graphicData>
       <texPath>Things/Plant/TreeBirch</texPath>
       <graphicClass>Graphic_Random</graphicClass>

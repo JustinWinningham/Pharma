@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>Numbicaine</defName>
     <label>Numbicaine</label>
-    <description>Very strong pain suppressing agent. Addictive.</description>
+    <description>Addictive, very strong pain suppressing agent. Commonly issued to soldiers to increase their combat effectiveness. Once injected into the bloodstream, it produces a euphoric numbing effect on the skin, and is very likely to cause withdrawl symptoms.</description>
     <graphicData>
       <texPath>Things/Item/Drug/Numbicaine</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
