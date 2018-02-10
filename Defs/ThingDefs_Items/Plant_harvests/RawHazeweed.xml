@@ -6,7 +6,7 @@
     <label>hazeweed</label>
     <description>A cluster of hazeweed leaves. The plant has a mild calming effect.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/PlantFoodRaw/Hazeweed</texPath>
+      <texPath>Things/Item/Resource/PlantFoodRaw/HazeweedBushle</texPath>
     </graphicData>
     <statBases>
       <MarketValue>2</MarketValue>
